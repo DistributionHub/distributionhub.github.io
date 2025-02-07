@@ -80,22 +80,92 @@ html {
 }
 
 .btn-download {
-    background: linear-gradient(45deg, #4FD2D7, #8CFFFA);
+    background: linear-gradient(45deg, 
+        #4FD2D7 0%, 
+        #8CFFFA 50%, 
+        #4FD2D7 100%
+    );
+    background-size: 200% auto;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.2);
     border: none;
     color: #ffffff;
     font-weight: bold;
     padding: 0.8rem 1.5rem;
     border-radius: 10px;
-    transition: all 1s;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     text-transform: uppercase;
     letter-spacing: 1px;
     font-size: 0.9rem;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.btn-download::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg,
+        #8CFFFA 0%,
+        #4FD2D7 50%,
+        #8CFFFA 100%
+    );
+    background-size: 200% auto;
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-download::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(
+        circle,
+        rgba(140, 255, 250, 0.6) 0%,
+        rgba(140, 255, 250, 0.3) 30%,
+        transparent 70%
+    );
+    transform: scale(0);
+    transition: transform 1s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: -1;
 }
 
 .btn-download:hover {
-    background: linear-gradient(45deg, #8CFFFA, #4FD2D7);
-    transform: scale(1.02);
-    box-shadow: 0 5px 15px rgba(140, 255, 250, 0.3);
+    color: #ffffff;
+    background-position: right center;
+    letter-spacing: 2px;
+}
+
+.btn-download:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+    background-position: right center;
+}
+
+.btn-download:hover::after {
+    transform: scale(1) rotate(45deg);
+}
+
+.btn-download:active {
+    transform: translateY(-1px);
+}
+
+.btn-download i {
+    margin-right: 8px;
+    transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+    display: inline-block;
+}
+
+.btn-download:hover i {
+    transform: translateX(3px) scale(1.2);
 }
 
 .distro-version {
@@ -164,6 +234,21 @@ html {
     margin-right: 10px;
 }
 
+.video-link {
+    color: #ff0000;
+    margin-left: 6px;
+    transition: color 0.4s ease;
+    text-decoration: none;
+}
+
+.video-link:hover {
+    color: #8CFFFA;
+}
+
+.video-link .fa-youtube {
+    font-size: 0.9em;
+}
+
 footer {
     position: fixed;
     bottom: 20px;
@@ -221,30 +306,61 @@ footer a:hover {
     transition: all 1s;
 }
 
-.search-container {
-    max-width: 1600px;
-    margin: 0 auto;
-    margin-top: 0px;
+.search-filter-group {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+    background: rgba(33, 37, 41, 0.8);
+    border-radius: 15px;
+    padding: 10px 15px;
+    border: 1px solid rgba(140, 255, 250, 0.1);
 }
 
-.search-container .input-group {
-    border: 2px solid rgba(255, 255, 255, 0.1);
-    border-radius: 20px;
-    overflow: hidden;
+.search-input-wrapper {
+    flex: 1;
 }
 
-.search-container input {
-    border: none;
-    box-shadow: none !important;
+.search-input-wrapper input {
+    border-color: rgba(140, 255, 250, 0.2);
+    border-radius: 12px;
 }
 
-.search-container input::placeholder {
-    color: rgba(255, 255, 255, 0.7) !important;
+.search-input-wrapper input::placeholder {
+    color: rgba(255, 255, 255, 0.6) !important;
 }
 
-.search-container .input-group-text {
-    border: none;
-    border-left: 1px solid #8CFFFA;
+.search-input-wrapper input:focus {
+    border-color: #8CFFFA;
+    box-shadow: 0 0 0 0.2rem rgba(140, 255, 250, 0.25);
+}
+
+.filter-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.filter-btn {
+    transition: all 0.3s ease;
+    border-width: 1px;
+    font-size: 0.85rem;
+    padding: 0.375rem 0.75rem;
+    background: transparent;
+    color: #8CFFFA;
+    border-color: rgba(140, 255, 250, 0.4);
+    border-radius: 12px;
+}
+
+.filter-btn:hover {
+    background-color: rgba(140, 255, 250, 0.1);
+    border-color: #8CFFFA;
+    color: #8CFFFA;
+}
+
+.filter-btn.active {
+    background-color: #8CFFFA;
+    color: #000;
+    border-color: #8CFFFA;
 }
 
 @media (min-width: 768px) {

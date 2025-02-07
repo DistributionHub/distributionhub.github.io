@@ -35,8 +35,15 @@
         </div>
 
         <div class="search-container mb-4 animate__animated animate__fadeIn">
-            <div class="input-group">
-                <input type="text" id="distroSearch" class="form-control bg-dark text-light" placeholder="Search distributions or details.." aria-label="Search distributions">
+            <div class="search-filter-group">
+                <div class="search-input-wrapper">
+                    <input type="text" id="distroSearch" class="form-control bg-dark text-light" placeholder="Search distributions or details.." aria-label="Search distributions">
+                </div>
+                <div class="filter-buttons">
+                    <button class="btn btn-outline-info btn-sm filter-btn" data-filter="beginner">Beginner</button>
+                    <button class="btn btn-outline-info btn-sm filter-btn" data-filter="advanced">Advanced</button>
+                    <button class="btn btn-outline-info btn-sm filter-btn" data-filter="lightweight">Lightweight</button>
+                </div>
             </div>
         </div>
 

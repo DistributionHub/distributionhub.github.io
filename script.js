@@ -36,7 +36,7 @@ const distributions = [
     { name: "Athena OS", version: "v23.11 x86_64", icon: "img/distro/athena.png", downloadLink: "https://github.com/Athena-OS/athena/releases/download/v23.11/athena-rolling-x86_64.iso", description: "Cybersecurity-focused, secure, and modern OS.", websiteLink: "https://athenaos.org/", category: "advanced"},
     { name: "PCLinuxOS", version: "2024.10 x86_64", icon: "img/distro/pclinuxos.svg", downloadLink: "https://ftp.nluug.nl/os/Linux/distr/pclinuxos/pclinuxos/iso/pclinuxos64-kde-2024.10.iso", description: "User-friendly and versatile Linux distribution.", websiteLink: "https://www.pclinuxos.com/", category: "beginner"},
     { name: "SteamFork", version: "20250204 x86_64", icon: "img/distro/steamfork.png", downloadLink: "https://www.steamfork.org/images/installer/steamfork-rel-latest-x86_64.iso", description: "SteamOS-based operating system.", websiteLink: "https://github.com/SteamFork", category: "beginner"},
-    { name: "Aurora", version: "Stable x86_64", icon: "img/distro/aurora.png", downloadLink: "https://dl.getaurora.dev/aurora-stable.iso", description: "Immutable KDE-based Linux distro.", websiteLink: "https://getaurora.dev/en", category: "advanced"},
+    { name: "Aurora", version: "Stable x86_64", icon: "img/distro/aurora.svg", downloadLink: "https://dl.getaurora.dev/aurora-stable.iso", description: "Immutable KDE-based Linux distro.", websiteLink: "https://getaurora.dev/en", category: "advanced"},
 ];
 
 const distroList = document.getElementById('distroList');

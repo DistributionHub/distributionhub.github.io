@@ -249,6 +249,21 @@ html {
     font-size: 0.9em;
 }
 
+.distro-title-link {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.distro-title-link:hover {
+    color: #8CFFFA !important;
+    text-decoration: none;
+}
+
+.card-title .video-link {
+    margin-left: 8px;
+}
+
 footer {
     position: fixed;
     bottom: 20px;
@@ -361,6 +376,35 @@ footer a:hover {
     background-color: #8CFFFA;
     color: #000;
     border-color: #8CFFFA;
+}
+
+.btn-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.torrent-icon {
+    opacity: 0.7;
+    transition: all 0.3s ease;
+    display: flex;
+    padding: 6px;
+}
+
+.torrent-icon i {
+    color: #8CFFFA;
+    font-size: 1.4em;
+    transition: all 0.3s ease;
+}
+
+.torrent-icon:hover {
+    opacity: 1;
+}
+
+.torrent-icon svg {
+    fill: #8CFFFA;
+    width: 24px;
+    height: 24px;
 }
 
 @media (min-width: 768px) {

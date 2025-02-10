@@ -39,6 +39,14 @@ const distributions = [
     { name: "SteamFork", version: "20250204 x86_64", icon: "img/distro/steamfork.png", downloadLink: "https://www.steamfork.org/images/installer/steamfork-rel-latest-x86_64.iso", description: "SteamOS-based operating system.", websiteLink: "https://github.com/SteamFork", category: "beginner"},
     { name: "Aurora", version: "Stable x86_64", icon: "img/distro/aurora.svg", downloadLink: "https://dl.getaurora.dev/aurora-stable.iso", description: "Immutable Linux distribution.", websiteLink: "https://getaurora.dev/en", category: "advanced"},
     { name: "AlmaLinux", version: "9.5 x86_64", icon: "img/distro/alma.svg", downloadLink: "https://repo.almalinux.org/almalinux/9.5/isos/x86_64/AlmaLinux-9-latest-x86_64-dvd.iso", description: "Non-profit distro compatible with RHEL.", websiteLink: "https://almalinux.org/", category: "advanced", torrent: "https://repo.almalinux.org/almalinux/9.5/isos/x86_64/AlmaLinux-9.5-x86_64.torrent"},
+    { name: "Void Linux", version: "2025.02.02 x86_64", icon: "img/distro/void.png", downloadLink: "https://repo-default.voidlinux.org/live/current/void-live-x86_64-20250202-xfce.iso", description: "A lightweight, rolling-release distro with runit.", websiteLink: "https://voidlinux.org/", category: "advanced"},
+    { name: "Gentoo Linux", version: "2025.02.02 amd64", icon: "img/distro/gentoo.png", downloadLink: "https://distfiles.gentoo.org/releases/amd64/autobuilds/20250202T154819Z/livegui-amd64-20250202T154819Z.iso", description: "A flexible, source-based rolling-release distro.", websiteLink: "https://www.gentoo.org/", category: "advanced"},
+    { name: "Calculate Linux", version: "2025.02.09 x86_64", icon: "img/distro/calculate.png", downloadLink: "https://mirror.calculate-linux.org/release/20250209/cld-20250209-x86_64.iso", description: "A preconfigured, Gentoo-based distro.", websiteLink: "https://www.calculate-linux.org/", category: "advanced"},
+    { name: "Artix", version: "2024.08.23 x86_64", icon: "img/distro/artix.svg", downloadLink: "https://iso.artixlinux.org/iso/artix-xfce-openrc-20240823-x86_64.iso", description: "A systemd-free, rolling-release Arch-based distro.", websiteLink: "https://artixlinux.org/", category: "advanced", torrent: "https://torrents.artixlinux.org/artix-xfce-openrc-20240823-x86_64.iso.torrent"},
+    { name: "Chimera Linux", version: "2024.12.04 x86_64", icon: "img/distro/chimera.png", downloadLink: "https://repo.chimera-linux.org/live/latest/chimera-linux-x86_64-LIVE-20241204-gnome.iso", description: "A modern, general-purpose Linux distribution.", websiteLink: "https://chimera-linux.org/", category: "advanced"},
+    { name: "OpenMandriva Lx ROME", version: "2025.01.18 x86_64", icon: "img/distro/openmandriva.png", downloadLink: "https://file-store.openmandriva.org/api/v1/file_stores/2765eed82445ea0121431b5469fddb32e4b3fd7b", description: "A user-friendly, rolling-release RPM-based distro.", websiteLink: "https://www.openmandriva.org/", category: "advanced"},
+    { name: "Tuxedo OS", version: "4 x86_64", icon: "img/distro/tuxedo.png", downloadLink: "https://os.tuxedocomputers.com/TUXEDO-OS_current.iso", description: "A Linux distro optimized for Tuxedo Computers.", websiteLink: "https://www.tuxedocomputers.com/en/TUXEDO-OS_1.tuxedo", category: "advanced", torrent: "https://os.tuxedocomputers.com/TUXEDO-OS-202501151546.iso.torrent"},
+    { name: "Serpent OS", version: "0.24.6 (alpha) x86_64", icon: "img/distro/serpentos.png", downloadLink: "https://download.serpentos.com/serpent-os-0.24.6-gnome.iso", description: "A modern, powerful, and open-source OS.", websiteLink: "https://serpentos.com/", category: "advanced"},
 ];
 
 const distroList = document.getElementById('distroList');
@@ -107,7 +115,7 @@ function createDistroCard(distro, animate = true) {
                         </a>
                         ${distro.torrent ? `
                         <a href="${distro.torrent}" class="torrent-icon" title="Download via Torrent" rel="noopener noreferrer">
-                            <i class="fas fa-download fa-lg"></i>
+                            <i class="fas fa-magnet fa-lg"></i>
                         </a>` : ''}
                     </div>
                 </div>

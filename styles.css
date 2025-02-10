@@ -389,6 +389,7 @@ footer a:hover {
     transition: all 0.3s ease;
     display: flex;
     padding: 6px;
+    text-decoration: none;
 }
 
 .torrent-icon i {

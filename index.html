@@ -29,9 +29,17 @@
             <h1 class="text-start subtle-glow animate__animated animate__fadeIn mb-3">
                 Welcome to <strong class="text-gradient">DistroHub</strong>
             </h1>
-            <a href="https://github.com/DistributionHub/distributionhub.github.io" target="_blank" rel="noopener noreferrer" class="github-link subtle-glow animate__animated animate__fadeIn mb-3">
-                <i class="fab fa-github"></i>
-            </a>
+            <div class="d-flex align-items-center gap-3">
+                <a href="https://github.com/DistributionHub/distributionhub.github.io/blob/main/DISCLAIMER" target="_blank" rel="noopener noreferrer" class="warning-link subtle-glow animate__animated animate__fadeIn mb-3" data-bs-toggle="tooltip" data-bs-placement="left" title="Please read the disclaimer before downloading.">
+                    <i class="fas fa-exclamation-triangle"></i>
+                </a>
+                <a href="https://discord.gg/3KXsRkDqtU" target="_blank" rel="noopener noreferrer" class="github-link subtle-glow animate__animated animate__fadeIn mb-3">
+                    <i class="fab fa-discord"></i>
+                </a>
+                <a href="https://github.com/DistributionHub/distributionhub.github.io" target="_blank" rel="noopener noreferrer" class="github-link subtle-glow animate__animated animate__fadeIn mb-3">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
         </div>
 
         <div class="search-container mb-4 animate__animated animate__fadeIn">
@@ -51,13 +59,6 @@
         <div class="row" id="distroList"></div>
     </main>
 
-    <footer id="disclaimer-footer">
-        <div class="container">
-            <button class="close-button" aria-label="Close disclaimer"><i class="fas fa-times"></i></button>
-            <p>Please <a href="https://github.com/DistributionHub/distributionhub.github.io/blob/main/DISCLAIMER" class="text-decoration-none text-light" target="_blank" rel="noopener noreferrer">read the disclaimer</a> before downloading.</p>
-        </div>
-    </footer>
-
     <a href="#" class="btn btn-primary scroll-to-top" aria-label="Scroll to top">
         <i class="fas fa-arrow-up"></i>
     </a>
@@ -65,6 +66,7 @@
     <script src="lib/bootstrap.bundle.min.js"></script>
     <script src="lib/gsap.min.js"></script>
     <script src="lib/particles.min.js"></script>
+    <script src="distros.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

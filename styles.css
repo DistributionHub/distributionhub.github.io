@@ -486,7 +486,6 @@ footer a:hover {
     background: linear-gradient(45deg, #4FD2D7, #8CFFFA);
     border-color: transparent;
     color: #000;
-    transform: translateY(-2px);
 }
 
 .pagination .page-item.active .page-link {

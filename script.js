@@ -174,7 +174,7 @@ function filterDistributions(searchTerm) {
 }
 
 let currentPage = 1;
-const itemsPerPage = 12;
+const itemsPerPage = 18;
 
 const paginationContainer = document.createElement('div');
 paginationContainer.className = 'pagination-container d-flex justify-content-end';
@@ -391,10 +391,10 @@ document.head.appendChild(style);
 
 particlesJS('particles-js', {
     particles: {
-        number: { value: 300, density: { enable: true, value_area: 800 } },
+        number: { value: 150, density: { enable: true, value_area: 800 } },
         color: { value: ["#ffffff", "#87cefa", "#4FD2D7", "#8CFFFA"] },
         shape: { type: "circle" },
-        opacity: { value: 0.8, random: true },
+        opacity: { value: 0.6, random: true },
         size: { value: 5, random: true },
         line_linked: { enable: false },
         move: { enable: true, speed: 0.2, direction: "none", random: true, straight: false, out_mode: "out", bounce: false }
